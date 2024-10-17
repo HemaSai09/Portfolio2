@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hema Sai Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section (First Page) -->
+    <section id="hero">
+        <div class="overlay">
+            <div class="content">
+                <p class="year">2024-2025</p>
+                <h1>DHULIPUDI HEMA SAI</h1>
+                <h2>PORTFOLIO</h2>
+                <p class="subheading">Data Analytics | Software Development</p>
+                <p class="contact">@hemasai | +91 8499930666</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="navigateToSlide(1)">Summary</a></li>
+            <li><a href="#" onclick="navigateToSlide(2)">Education</a></li>
+            <li><a href="#" onclick="navigateToSlide(3)">Skills & Certifications</a></li>
+            <li><a href="#" onclick="navigateToSlide(4)">Experience</a></li>
+            <li><a href="#" onclick="navigateToSlide(5)">Projects</a></li>
+            <li><a href="#" onclick="navigateToSlide(6)">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slider Container -->
+    <div class="slider-container">
+        <!-- Slides -->
+        <section class="slide" id="summary">
+            <h2>About Me</h2>
+            <p>Highly stimulated with a strong foundation in programming languages (Java, C, Python), and software program improvement ideas. I am eager to use my skills and contribute to a collaborative group environment, while continuing to research and extend my abilities. Excellent technical capabilities and expertise in programming languages, information analysis, and information visualization.</p>
+        </section>
+
+        <section class="slide" id="education">
+            <h2>Education</h2>
+            <p><strong>BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE-[AI&ML]</strong> cGPA 7.66 <br>
+            SRK INSTITUTE OF TECHNOLOGY, Enikepadu, Vijayawada, Andhra Pradesh, India – 521108</p>
+            <p><strong>BOARD OF INTERMEDIATE EDUCATION</strong> CGPA 9.28 <br>
+            NARAYANA Junior College, Vuyyuru, Andhra Pradesh, India – 521165</p>
+            <p><strong>SSC</strong> CGPA 9.3 <br>
+            JESUS High School, Veerankilock, Andhra Pradesh, India – 521250</p>
+        </section>
+
+        <section class="slide" id="skills">
+            <h2>Skills & Certifications</h2>
+            <ul>
+                <li>Python, Java, SQL</li>
+                <li>Machine Learning</li>
+                <li>Data Structures through Python</li>
+                <li>Problem Solving skills</li>
+                <li>Basics of Data Analytics</li>
+                <li>Communication skills</li>
+            </ul>
+            <h3>Certifications</h3>
+            <ul>
+                <li>Microsoft Azure DevOps</li>
+                <li>AWS Academy Cloud Foundations</li>
+                <li>AWS Academy Machine Learning Foundations</li>
+            </ul>
+        </section>
+
+        <section class="slide" id="experience">
+            <h2>Experience (Internships)</h2>
+            <h3>AWS Academy – Data Analytics Intern</h3>
+            <p>Conducted consumer data analysis on products to assist with promotional campaigns. Used Python, SQL, Tableau, Power BI, Google Analytics, and SAS to analyze conversion rates across multiple digital channels. Collaborated on machine learning initiatives and continuously monitored performance metrics post-deployment.</p>
+            <h3>Salesforce Trailhead – Salesforce Developer Intern</h3>
+            <p>Contributed to project success by participating in agile development meetings. Demonstrated initiative by improving existing Salesforce applications and regularly monitored system health.</p>
+        </section>
+
+        <section class="slide" id="projects">
+            <h2>Projects</h2>
+            <h3>Hand Written Digit recognition Using CNN</h3>
+            <p>Built a CNN model to recognize handwritten digits from the MNIST dataset. Preprocessed images, designed the architecture, trained the model, and achieved high accuracy.</p>
+            <h3>A Social Platform License Plate Communication</h3>
+            <p>Developed a website using license plate recognition to facilitate communication between parked car owners and inconvenienced drivers. Enables SMS or phone call notification upon license plate scan.</p>
+        </section>
+
+        <section class="slide" id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Watching Movies</li>
+                <li>Playing Volleyball</li>
+                <li>Learning new Technologies</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- JavaScript for Slide Navigation -->
+    <script>
+        let currentSlide = 0;
+        function navigateToSlide(slideIndex) {
+            const slides = document.querySelectorAll('.slide');
+            const slideWidth = slides[0].clientWidth;
+            document.querySelector('.slider-container').style.transform = `translateX(-${slideWidth * (slideIndex - 1)}px)`;
+        }
+    </script>
+</body>
+</html>
